@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion';
 import Preloader from '@/components/Preloader';
 import Landing from '@/components/Landing';
-
+import Skills from '@/components/Skills';
+import Description from '../components/Description';
 
 export default function Home() {
 
@@ -13,7 +14,10 @@ export default function Home() {
     (
       async () => {
           const LocomotiveScroll = (await import('locomotive-scroll')).default
-          const locomotiveScroll = new LocomotiveScroll();
+          const locomotiveScroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true,
+          });
 
           setTimeout( () => {
             setIsLoading(false);
@@ -24,12 +28,34 @@ export default function Home() {
     )()
   }, [])
 
+  // return (
+  //   <main data-scroll-section>
+  //     <AnimatePresence mode='wait'>
+  //       {isLoading && <Preloader />}
+  //     </AnimatePresence>
+  //     <Landing />
+  //     {/* <Description /> */}
+  //     <Skills />
+  //   </main>
+  // )
+
+    
+    
   return (
-    <main>
-      <AnimatePresence mode='wait'>
+    <main data-scroll-container>
+      <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
-      <Landing />
+      <div data-scroll-section>
+        <Landing />
+      </div>
+      <div data-scroll-section>
+        <Description />
+      </div>
+      <div data-scroll-section>
+        <Skills />
+      </div>
     </main>
-  )
+  );
+  
 }

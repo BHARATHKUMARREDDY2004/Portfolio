@@ -14,8 +14,9 @@
   }
 }
 
+
 body{
   margin: 0px;
-  overflow: hidden;
   cursor: wait;
+  overflow: hidden;
 }
