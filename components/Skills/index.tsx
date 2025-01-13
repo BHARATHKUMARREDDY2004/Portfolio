@@ -22,6 +22,45 @@ const Skills = () => {
                     </li>
                 ))}
             </ul>
+
+            <h2 className="text-2xl font-bold mb-4">Skills</h2>
+            <ul className="list-disc list-inside">
+                {skills.map((skill, index) => (
+                    <li key={index} className="text-lg mb-2">
+                        {skill}
+                    </li>
+                ))}
+            </ul>
+
+            <h2 className="text-2xl font-bold mb-4">Skills</h2>
+            <ul className="list-disc list-inside">
+                {skills.map((skill, index) => (
+                    <li key={index} className="text-lg mb-2">
+                        {skill}
+                    </li>
+                ))}
+            </ul>            <h2 className="text-2xl font-bold mb-4">Skills</h2>
+            <ul className="list-disc list-inside">
+                {skills.map((skill, index) => (
+                    <li key={index} className="text-lg mb-2">
+                        {skill}
+                    </li>
+                ))}
+            </ul>            <h2 className="text-2xl font-bold mb-4">Skills</h2>
+            <ul className="list-disc list-inside">
+                {skills.map((skill, index) => (
+                    <li key={index} className="text-lg mb-2">
+                        {skill}
+                    </li>
+                ))}
+            </ul>            <h2 className="text-2xl font-bold mb-4">Skills</h2>
+            <ul className="list-disc list-inside">
+                {skills.map((skill, index) => (
+                    <li key={index} className="text-lg mb-2">
+                        {skill}
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 };
