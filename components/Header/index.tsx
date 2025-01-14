@@ -83,7 +83,7 @@ export default function Header() {
             </Magnetic>
           ))}
         </nav>
-        <div className="flex md:hidden items-center pb-1">
+        <div className="flex md:hidden items-center">
           <Magnetic>
             <div
               className="flex items-center relative z-[1] cursor-pointer group"

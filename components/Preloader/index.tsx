@@ -1,22 +1,27 @@
 'use client';
-import styles from './style.module.scss';
+
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { opacity, slideUp } from './anim';
 
 const words = ["Hello", "Bonjour", "Ciao", "Olà", "やあ", "Hallå", "Guten tag", "Hallo"]
 
-export default function Index() {
+export default function Introduction() {
     const [index, setIndex] = useState(0);
     const [dimension, setDimension] = useState({width: 0, height:0});
 
-    useEffect( () => {
+    useEffect(() => {
+      const updateDimension = () => {
         setDimension({width: window.innerWidth, height: window.innerHeight})
+      }
+      updateDimension()
+      window.addEventListener('resize', updateDimension)
+      return () => window.removeEventListener('resize', updateDimension)
     }, [])
 
-    useEffect( () => {
+    useEffect(() => {
         if(index == words.length - 1) return;
-        setTimeout( () => {
+        setTimeout(() => {
             setIndex(index + 1)
         }, index == 0 ? 1000 : 150)
     }, [index])
@@ -36,12 +41,30 @@ export default function Index() {
     }
 
     return (
-        <motion.div variants={slideUp} initial="initial" exit="exit" className={styles.introduction}>
+        <motion.div 
+            variants={slideUp} 
+            initial="initial" 
+            exit="exit" 
+            className="h-screen w-screen flex items-center justify-center fixed z-[99] bg-gray-900"
+        >
             {dimension.width > 0 && 
             <>
-                <motion.p variants={opacity} initial="initial" animate="enter"><span></span>{words[index]}</motion.p>
-                <svg>
-                    <motion.path variants={curve} initial="initial" exit="exit"></motion.path>
+                <motion.p 
+                    variants={opacity} 
+                    initial="initial" 
+                    animate="enter" 
+                    className="flex text-white text-2xl md:text-[42px] items-center absolute z-10"
+                >
+                    <span className="block w-[10px] h-[10px] bg-white rounded-full mr-[10px]"></span>
+                    {words[index]}
+                </motion.p>
+                <svg className="absolute top-0 w-full h-[calc(100%+150px)] md:h-[calc(100%+300px)]">
+                    <motion.path 
+                        variants={curve} 
+                        initial="initial" 
+                        exit="exit"
+                        className="fill-gray-900"
+                    ></motion.path>
                 </svg>
             </>
             }
