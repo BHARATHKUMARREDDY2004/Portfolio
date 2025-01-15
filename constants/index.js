@@ -1,0 +1,58 @@
+export const collabApps = [
+  {
+    id: "0",
+    title: "Figma",
+    icon: '/collaboration/figma.png',
+    width: 26,
+    height: 36,
+  },
+  {
+    id: "1",
+    title: "Notion",
+    icon: '/collaboration/notion.png',
+    width: 34,
+    height: 36,
+  },
+  {
+    id: "2",
+    title: "Discord",
+    icon: '/collaboration/discord.png',
+    width: 36,
+    height: 28,
+  },
+  {
+    id: "3",
+    title: "Slack",
+    icon: '/collaboration/slack.png',
+    width: 34,
+    height: 35,
+  },
+  {
+    id: "4",
+    title: "Photoshop",
+    icon: '/collaboration/photoshop.png',
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "5",
+    title: "Protopie",
+    icon: '/collaboration/protopie.png',
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "6",
+    title: "Framer",
+    icon: '/collaboration/framer.png',
+    width: 26,
+    height: 34,
+  },
+  {
+    id: "7",
+    title: "Raindrop",
+    icon: '/collaboration/raindrop.png',
+    width: 38,
+    height: 32,
+  },
+];
