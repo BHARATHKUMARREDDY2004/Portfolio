@@ -24,16 +24,15 @@ body{
   scrollbar-width: none;
 }
 
-/* In your global styles or specific CSS file */
-@keyframes rotateInfinite {
+@keyframes scroll {
   0% {
-    transform: rotate(0deg);
+    transform: translateX(0);
   }
   100% {
-    transform: rotate(360deg);
+    transform: translateX(-50%);
   }
 }
 
-.animate-rotate-infinite {
-  animation: rotateInfinite 10s linear infinite;
+.animate-scroll {
+  animation: scroll 30s linear infinite;
 }

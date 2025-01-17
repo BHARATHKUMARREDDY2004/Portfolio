@@ -1,12 +1,23 @@
-import styles from './style.module.scss';
-
-export default function index() {
+export default function Index() {
   return (
-    <div className={styles.footer}>
-        <a>Awwwards</a>
-        <a>Instagram</a>
-        <a>Dribble</a>
-        <a>LinkedIn</a>
+    <div>
+      <div className="text-[#999] border-b border-[#999] text-xs mb-6">
+        <p>Socials</p>
+      </div>
+      <div className="flex flex-row justify-between gap-4 text-sm">
+        <a href="#" className="hover:text-white transition-colors">
+          Awwwards
+        </a>
+        <a href="#" className="hover:text-white transition-colors">
+          Instagram
+        </a>
+        <a href="#" className="hover:text-white transition-colors">
+          Dribble
+        </a>
+        <a href="#" className="hover:text-white transition-colors">
+          LinkedIn
+        </a>
+      </div>
     </div>
-  )
+  );
 }

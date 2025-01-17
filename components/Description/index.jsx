@@ -6,33 +6,38 @@ import Rounded from '../../common/RoundedButton';
 export default function Description() {
     const phrase = "Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge.";
     const description = useRef(null);
-    const isInView = useInView(description)
+    const isInView = useInView(description);
 
     return (
-        <div ref={description} className="px-4 md:px-8 lg:px-20 xl:px-40 mt-20 md:mt-40 flex justify-center pb-[600px]">
+        <div ref={description} className="px-4 md:px-8 lg:px-20 xl:px-40 mt-20 md:mt-40 flex justify-center">
             <div className="max-w-7xl flex flex-col md:flex-row gap-8 md:gap-12 relative">
                 <div className="w-full md:w-2/3">
                     <p className="text-2xl md:text-3xl lg:text-4xl leading-tight">
                         {phrase.split(" ").map((word, index) => (
-                            <span key={index} className="inline-block overflow-hidden">
-                                <motion.span 
+                            <span
+                                key={index}
+                                className="inline-block overflow-hidden whitespace-nowrap" // Add whitespace handling
+                            >
+                                <motion.span
                                     className="inline-block"
-                                    variants={slideUp} 
-                                    custom={index} 
+                                    variants={slideUp}
+                                    custom={index}
                                     animate={isInView ? "open" : "closed"}
                                 >
-                                    {word}{' '}
+                                    {word}&nbsp; {/* Use non-breaking space */}
                                 </motion.span>
                             </span>
                         ))}
                     </p>
                 </div>
                 <div className="w-full md:w-1/3">
-                    <motion.p 
+                    <motion.p
                         className="text-base md:text-lg font-light"
-                        variants={opacity} 
+                        variants={opacity}
                         animate={isInView ? "open" : "closed"}
                     >
+                        The combination of my passion for design, code & interaction positions me in a unique place in the web design world.
+                        The combination of my passion for design, code & interaction positions me in a unique place in the web design world.
                         The combination of my passion for design, code & interaction positions me in a unique place in the web design world.
                     </motion.p>
                 </div>
@@ -43,6 +48,5 @@ export default function Description() {
                 </div> */}
             </div>
         </div>
-    )
+    );
 }
-
