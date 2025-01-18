@@ -55,7 +55,7 @@
 
 //   return (
 //     <div className="flex flex-col items-center justify-center py-16 lg:py-32">
-//       <p className="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
+//       <p className="lg:w-[22rem] lg:mx-auto">
 //         {"Frontend Skills"}
 //       </p>
 
@@ -84,7 +84,7 @@
 //         </div>
 //       </div>
 
-//       <p className="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
+//       <p className="lg:w-[22rem] lg:mx-auto">
 //         {"Backend Skills"}
 //       </p>
 
@@ -176,7 +176,7 @@ const Skills = () => {
 
  return (
     <div className="pb-[300px] flex flex-col items-center justify-center py-16 lg:py-32">
-      <p className="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
+      <p className="lg:w-[22rem] lg:mx-auto my-6 font-semibold text-center text-xl">
         {"Frontend Skills"}
       </p>
 
@@ -188,7 +188,7 @@ const Skills = () => {
             {frontEnd.map((app) => (
               <div
                 key={app.id}
-                className="flex items-center justify-center mx-4 border border-gray-500/30 rounded-xl md:rounded-xl lg:rounded-2xl flex-shrink-0 w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
+                className="flex items-center justify-center mx-1 md:mx-2 lg:mx-4 border border-gray-500/30 rounded-xl md:rounded-xl lg:rounded-2xl flex-shrink-0 w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
               >
                 <Image
                   className="m-auto"
@@ -203,7 +203,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <p className="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
+      <p className="lg:w-[22rem] lg:mx-auto my-6 font-semibold text-center text-xl">
         {"Backend Skills"}
       </p>
 
@@ -215,7 +215,7 @@ const Skills = () => {
             {backEnd.map((app) => (
               <div
                 key={app.id}
-                className="flex items-center justify-center mx-4 border border-gray-500/30 rounded-xl md:rounded-xl lg:rounded-2xl flex-shrink-0 w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
+                className="flex items-center justify-center mx-1 md:mx-2 lg:mx-4 border border-gray-500/30 rounded-xl md:rounded-xl lg:rounded-2xl flex-shrink-0 w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
               >
                 <Image
                   className="m-auto"

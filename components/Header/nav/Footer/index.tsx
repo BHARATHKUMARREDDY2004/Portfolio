@@ -1,7 +1,7 @@
 export default function Index() {
   return (
     <div>
-      <div className="text-[#999] border-b border-[#999] text-xs mb-6">
+      <div className="text-gray-600 border-b border-gray-600 uppercase text-xs mb-2">
         <p>Socials</p>
       </div>
       <div className="flex flex-row justify-between gap-4 text-sm">

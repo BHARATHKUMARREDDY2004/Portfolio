@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import styles from './style.module.scss';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { menuSlide } from '../animation';
@@ -26,7 +25,7 @@ const navItems = [
   },
 ]
 
-export default function index() {
+export default function Index() {
 
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
@@ -37,11 +36,14 @@ export default function index() {
       initial="initial" 
       animate="enter" 
       exit="exit" 
-      className={styles.menu}
+      className="fixed top-0 right-0 h-screen bg-gray-900 text-white z-[3] w-full lg:w-auto"
       >
-       <div className={styles.body}>
-            <div onMouseLeave={() => {setSelectedIndicator(pathname)}} className={styles.nav}>
-                    <div className={styles.header}>
+       <div className="box-border h-[90%] flex flex-col justify-between p-[38px] lg:p-24">
+            <div 
+              onMouseLeave={() => {setSelectedIndicator(pathname)}}
+              className="flex flex-col text-5xl gap-6 my-20"
+            >
+                    <div className="text-gray-600 border-b border-gray-600 uppercase text-xs mb-8">
                         <p>Navigation</p>
                     </div>
                     {

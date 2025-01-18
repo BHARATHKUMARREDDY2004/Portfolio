@@ -26,7 +26,7 @@ export default function Header() {
       scrollTrigger: {
         trigger: document.documentElement,
         start: 0,
-        end: window.innerHeight,
+        end: window.innerHeight - 600,
         onLeave: () => {
           gsap.to(button.current, {
             scale: 1,
@@ -35,11 +35,12 @@ export default function Header() {
           });
         },
         onEnterBack: () => {
-          gsap.to(
-            button.current,
-            { scale: 0, duration: 0.25, ease: "power1.out" },
-            () => setIsActive(false)
-          );
+          gsap.to(button.current, {
+            scale: 0,
+            duration: 0.25,
+            ease: "power1.out",
+          });
+          setIsActive(false);
         },
       },
     });
@@ -49,13 +50,9 @@ export default function Header() {
     <>
       <div
         ref={header}
-        className="absolute flex z-10 top-0 text-white p-9 justify-between w-full font-light box-border items-center px-3 py-4 md:px-9 md:py-9"
+        className="absolute flex top-0 text-white p-9 justify-between w-full font-light box-border items-center px-3 py-4 md:px-9 md:py-9"
       >
-        <div
-          className={`flex cursor-pointer group transition-all duration-300 ease-in-out ${
-            isActive ? "opacity-0 pointer-events-none" : "opacity-100"
-          }`}
-        >
+        <div className={`z-[3] flex cursor-pointer`}>
           <p className="m-0 transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:rotate-360">
             ©
           </p>
@@ -86,7 +83,7 @@ export default function Header() {
         <div className="flex md:hidden items-center">
           <Magnetic>
             <div
-              className="flex items-center relative z-[1] cursor-pointer group"
+              className="flex items-center relative z-[4] cursor-pointer group"
               onClick={() => setIsActive(!isActive)} // Toggle `isActive` state
             >
               {/* Smooth transition between "Menu" and "Close" */}
