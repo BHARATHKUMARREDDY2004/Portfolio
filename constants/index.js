@@ -80,3 +80,39 @@ export const backEnd = [
         height: 42,
     }
   ];
+
+
+  export const sliderData = [
+    {
+      image: '/projects/img1.png',
+      category: 'design',
+      title: 'Slider 01',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.',
+    },
+    {
+      image: '/projects/img2.jpg',
+      category: 'design',
+      title: 'Slider 02',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.',
+    },
+    {
+      image: '/projects/img3.jpg',
+      category: 'design',
+      title: 'Slider 03',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.',
+    },
+    {
+      image: '/projects/img4.jpg',
+      category: 'design',
+      title: 'Slider 04',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.',
+    },
+    {
+      image: '/projects/img5.jpg',
+      category: 'design',
+      title: 'Slider 05',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.',
+    },
+  ]
+  
+  

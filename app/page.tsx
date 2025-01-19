@@ -3,8 +3,9 @@ import { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion';
 import Preloader from '@/components/Preloader';
 import Landing from '@/components/Landing';
-import Skills from '@/components/Skills';
 import Description from '@/components/Description';
+import Skills from '@/components/Skills';
+import Projects from '@/components/Projects';
 
 
 export default function Home() {
@@ -34,6 +35,7 @@ export default function Home() {
       <Landing />
       <Description />
       <Skills />
+      <Projects />
     </main>
   )
 }
