@@ -2,9 +2,12 @@ import type { Config } from "tailwindcss";
 
 export default {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    './app/**/*.{js,ts,jsx,tsx}',   // Next.js App directory
+    './components/**/*.{js,ts,jsx,tsx}',
+    './common/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}', // For pages directory (if used)
+    './public/**/*.html'
+
   ],
   theme: {
     extend: {
